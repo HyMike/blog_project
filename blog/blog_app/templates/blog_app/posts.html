@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Individual Posts
+{% endblock %}
+
+{% block styles_css %}
+<link rel='stylesheet' href='{% static "blog_app/post.css" %}'>
+<link rel='stylesheet' href='{% static "blog_app/posts.css" %}'>
+{% endblock %}
+
+{% block body_content %}
+<section id="all-posts"> 
+    <h2>The Story of My Life!</h2>
+    <ul>
+        {% include "blog_app/includes/post.html" %}
+        {% include "blog_app/includes/post.html" %}
+        {% include "blog_app/includes/post.html" %}
+        {% include "blog_app/includes/post.html" %}
+        {% include "blog_app/includes/post.html" %}
+        {% include "blog_app/includes/post.html" %}
+</section>
+
+{% endblock %}

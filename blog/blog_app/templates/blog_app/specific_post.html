@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+{{slug}}
+{% endblock %}
+
+
+{% block styles_css %}
+<link rel='stylesheet' href='{% static "blog_app/post.css" %}'>
+<link rel='stylesheet' href='{% static "blog_app/posts.css" %}'>
+{% endblock %}
+
+
+{% block body_content %}
+<section id='summary'>
+ 
+</section> 
+<h1>Enjoy reading this post!</h1>
+<p>{{slug}}</p>
+{% endblock %}

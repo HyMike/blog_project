@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Michael's Blog
+{% endblock %}
+
+{% block styles_css %}
+<link rel='stylesheet' href='{% static "blog_app/post.css" %}'>
+<link rel='stylesheet' href='{% static "blog_app/app.css" %}'>
+{% endblock %}
+
+{% block body_content %}
+
+{% comment %} section for welcome {% endcomment %}
+<section id='welcome'>
+    <header>
+        <img src="{% static 'blog_app/images/Michael.jpeg' %}" alt="Michael's Cool Blog"> 
+        <h2>Welcome to Michael's Blog</h2>
+    </header>
+</section>
+
+{% comment %} section for latest blog post {% endcomment %}
+<section id='latest-posts'> 
+    <ul>
+        {% include "blog_app/includes/post.html" %}
+    </ul> 
+</section>
+  
+
+<section id='about'>
+    <h2>I love programming and buying real estate! </h2>
+    <p>
+        In the convergence of programming and real estate, I find boundless opportunities for creativity, growth, and fulfillment. Whether I'm crafting elegant algorithms or scouting for the next investment property, each endeavor fuels my passion and drives me forward on my journey of exploration and discovery. With programming as my toolkit and real estate as my canvas, I embrace the endless possibilities and eagerly anticipate the adventures that lie ahead.
+    </p>
+</section>
+
+
+{% endblock %}
+
