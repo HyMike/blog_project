@@ -3,11 +3,12 @@
 <ul>
     <li> 
         <article class='post'> 
-            <a href='{% url "specific_post" "real-estate" %}'>
-                <img src="{% static 'blog_app/images/real_estate.jpg' %}" alt="latest-post">
+            <a href='{% url "specific_post" post.slug %}'>
+                <img src="{% static 'blog_app/images/'|add:post.image %}" alt="{{post.title}}">
                 <div id='post_content'>
-                    <h3>Buying My First Apartment Building!</h3>
-                    <p>When buying an apartment, location is key. Research different neighborhoods to find one that aligns with your lifestyle and preferences. Consider factors such as proximity to work, schools, public transportation, amenities, and safety. Visiting neighborhoods in person and talking to residents can provide valuable insights into what it's like to live there.
+                    <h3>{{post.title}}</h3>
+                    <p>
+                        {{post.excerpt}}
                     </p>
                 </div>
             </a>

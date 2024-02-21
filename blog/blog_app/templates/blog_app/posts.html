@@ -14,12 +14,9 @@ Individual Posts
 <section id="all-posts"> 
     <h2>The Story of My Life!</h2>
     <ul>
+        {% for post in all_posts %}
         {% include "blog_app/includes/post.html" %}
-        {% include "blog_app/includes/post.html" %}
-        {% include "blog_app/includes/post.html" %}
-        {% include "blog_app/includes/post.html" %}
-        {% include "blog_app/includes/post.html" %}
-        {% include "blog_app/includes/post.html" %}
+        {% endfor %}
 </section>
 
 {% endblock %}

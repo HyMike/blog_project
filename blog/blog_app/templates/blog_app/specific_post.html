@@ -8,15 +8,30 @@
 
 
 {% block styles_css %}
-<link rel='stylesheet' href='{% static "blog_app/post.css" %}'>
-<link rel='stylesheet' href='{% static "blog_app/posts.css" %}'>
+{% comment %} <link rel='stylesheet' href='{% static "blog_app/post.css" %}'>
+<link rel='stylesheet' href='{% static "blog_app/posts.css" %}'> {% endcomment %}
+<link rel='stylesheet' href='{% static "blog_app/specific_post.css" %}'>
 {% endblock %}
 
 
 {% block body_content %}
 <section id='summary'>
- 
+    <h2>{{specific_post.title}}</h2>
+    <article>
+        <img src='{% static "blog_app/images/"|add:specific_post.image %}' alt="{{specific_post.title}}" />
+        <address>{{specific_post.author}}</address>
+        <div>
+            Last Updated On <time>{{specific_post.date}}</time>
+        </div>
+    </article>
 </section> 
-<h1>Enjoy reading this post!</h1>
-<p>{{slug}}</p>
+    <main>
+       <p>
+        {{specific_post.content| linebreaks}}
+       </p>
+    </main>
+
+
+    
+
 {% endblock %}

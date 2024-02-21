@@ -23,7 +23,9 @@ Michael's Blog
 {% comment %} section for latest blog post {% endcomment %}
 <section id='latest-posts'> 
     <ul>
+        {% for post in latest_posts %}
         {% include "blog_app/includes/post.html" %}
+        {% endfor %}
     </ul> 
 </section>
   
