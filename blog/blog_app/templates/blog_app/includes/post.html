@@ -1,10 +1,9 @@
-{% load static %} 
 
 <ul>
     <li> 
         <article class='post'> 
             <a href='{% url "specific_post" post.slug %}'>
-                <img src="{% static 'blog_app/images/'|add:post.image %}" alt="{{post.title}}">
+                <img src="{{post.image.url}}" alt="{{post.title}}">
                 <div id='post_content'>
                     <h3>{{post.title}}</h3>
                     <p>
