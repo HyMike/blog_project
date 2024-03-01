@@ -1,0 +1,16 @@
+
+<ul>
+    <li> 
+        <article class='post'> 
+            <a href='{% url "specific_post" post.slug %}'>
+                <img src="{{post.image.url}}" alt="{{post.title}}">
+                <div id='post_content'>
+                    <h3>{{post.title}}</h3>
+                    <p>
+                        {{post.excerpt}}
+                    </p>
+                </div>
+            </a>
+        </article>
+    </li>
+</ul>
